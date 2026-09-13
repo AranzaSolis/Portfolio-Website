@@ -132,7 +132,8 @@ h2 em {
 .hero {
 	align-items: center;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
+	justify-items: center;
 	margin: 0 auto;
 	max-width: 1440px;
 	min-height: calc(100vh - 78px);
@@ -146,6 +147,12 @@ h2 em {
 	padding-bottom: 5%;
 	position: relative;
 	z-index: 1;
+}
+
+.portrait-name {
+	font-size: clamp(3.2rem, 6vw, 6rem);
+	margin: 24px 0 0;
+	text-align: center;
 }
 
 .eyebrow {
@@ -188,6 +195,7 @@ h2 em {
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
+	width: 100%;
 }
 
 .portrait-ring {
@@ -226,39 +234,85 @@ h2 em {
 	width: 100%;
 }
 
-.portrait-caption {
-	bottom: 11%;
-	font-family: var(--serif);
-	font-size: clamp(1rem, 1.5vw, 1.35rem);
-	font-style: italic;
-	left: -3%;
-	position: absolute;
-	transform: rotate(-8deg);
-}
-
-.portrait-caption span {
-	color: #d77b6a;
-	font-family: var(--sans);
-	font-style: normal;
-}
-
 .scroll-note {
-	bottom: 8%;
-	color: var(--muted);
-	font-family: var(--mono);
-	font-size: .58rem;
-	letter-spacing: .02em;
-	position: absolute;
-	right: 3%;
+	border-bottom: 1px solid var(--ink);
+	display: inline-block;
+	font-size: .75rem;
+	letter-spacing: .04em;
+	margin-top: 32px;
+	padding-bottom: 8px;
 	text-transform: uppercase;
-	transform: rotate(90deg) translateX(50%);
-	transform-origin: right;
 }
 
 .scroll-note span {
 	color: #d77b6a;
+	font-family: var(--sans);
 	font-size: 1rem;
-	margin-left: 7px;
+	font-style: normal;
+	margin-left: 8px;
+}
+
+/* Keep the About content centered after the legacy stylesheet block. */
+
+.intro-content {
+	justify-self: center;
+	max-width: 980px;
+	width: 100%;
+	text-align: center;
+}
+
+.intro.section-grid {
+	grid-template-columns: 1fr;
+}
+
+.intro-columns {
+	display: block;
+	margin: 60px auto 36px;
+	max-width: 680px;
+}
+
+.intro-content .hero-intro {
+	margin: 0 auto;
+	max-width: 680px;
+}
+
+.intro-content {
+	text-align: center;
+}
+
+.intro-columns {
+	display: block;
+	margin: 60px auto 36px;
+	max-width: 680px;
+}
+
+.intro-content .hero-intro {
+	margin: 0 auto;
+	max-width: 680px;
+}
+
+.intro-content {
+	text-align: center;
+}
+
+.intro-columns {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.intro-content .hero-intro {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 680px;
+}
+
+.hero {
+	background-color: var(--paper);
+	background-image:
+		linear-gradient(rgba(190, 177, 166, .2) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(190, 177, 166, .2) 1px, transparent 1px);
+	background-size: 48px 48px;
 }
 
 .hero-stamp {
@@ -633,13 +687,8 @@ h2 em {
 		width: 78vw;
 	}
 
-	.portrait-caption {
-		left: 4%;
-	}
-
-	.scroll-note {
-		bottom: 5%;
-		right: -4%;
+	.portrait-name {
+		font-size: clamp(3rem, 14vw, 5rem);
 	}
 
 	.hero-stamp {
@@ -826,4 +875,61 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 500; letter-spacing: -.08
 	.project-grid { grid-template-columns: 1fr; }
 	.project-art { aspect-ratio: 1 / .75; }
 	.site-footer { flex-wrap: wrap; gap: 13px; line-height: 1.5; }
+}
+
+/* Current hero layout overrides the legacy rules below. */
+
+.hero {
+	grid-template-columns: 1fr;
+	justify-items: center;
+}
+
+.portrait-stage {
+	width: 100%;
+}
+
+.scroll-note {
+	border-bottom: 1px solid var(--ink);
+	color: var(--ink);
+	display: inline-block;
+	font-family: var(--sans);
+	font-size: .75rem;
+	letter-spacing: .04em;
+	margin: 32px 0 0;
+	padding-bottom: 8px;
+	position: static;
+	text-transform: uppercase;
+	transform: none;
+}
+
+.scroll-note span {
+	color: #d77b6a;
+	font-family: var(--sans);
+	font-size: 1rem;
+	font-style: normal;
+	margin-left: 8px;
+}
+
+/* Keep the About content centered after the legacy stylesheet block. */
+
+.intro-content {
+	justify-self: center;
+	max-width: 980px;
+	width: 100%;
+	text-align: center;
+}
+
+.intro.section-grid {
+	grid-template-columns: 1fr;
+}
+
+.intro-columns {
+	display: block;
+	margin: 60px auto 36px;
+	max-width: 680px;
+}
+
+.intro-content .hero-intro {
+	margin: 0 auto;
+	max-width: 680px;
 }
