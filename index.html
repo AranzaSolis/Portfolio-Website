@@ -120,6 +120,30 @@
 		}, { threshold: 0.22 });
 
 		animatedSections.forEach((section) => sectionObserver.observe(section));
+
+		const navLinks = document.querySelectorAll('.main-nav a');
+		const pageSections = document.querySelectorAll('main > section');
+		const visibleSections = new Map();
+
+		const navObserver = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				visibleSections.set(entry.target.id, entry);
+			});
+
+			const activeSection = [...visibleSections.values()]
+				.filter((entry) => entry.isIntersecting)
+				.sort((first, second) => second.intersectionRatio - first.intersectionRatio)[0];
+
+			if (!activeSection) {
+				return;
+			}
+
+			navLinks.forEach((link) => {
+				link.classList.toggle('active', link.getAttribute('href') === `#${activeSection.target.id}`);
+			});
+		}, { threshold: [0.3, 0.6] });
+
+		pageSections.forEach((section) => navObserver.observe(section));
 	</script>
 
 	<!--

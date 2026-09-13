@@ -276,6 +276,87 @@ h2 em {
 	max-width: 680px;
 }
 
+.skills.section-grid,
+.work.section-grid,
+.contact.section-grid {
+	grid-template-columns: 1fr !important;
+}
+
+.skills-content,
+.work-content,
+.contact-content {
+	justify-self: center !important;
+	max-width: 980px;
+	text-align: center !important;
+	width: 100% !important;
+}
+
+.skills-content h2,
+.work-content h2,
+.contact-content h2 {
+	text-align: center;
+}
+
+.section-heading-row {
+	display: block !important;
+	text-align: center !important;
+}
+
+.section-heading-row p {
+	margin: 28px auto 0 !important;
+}
+
+.skills.section-grid,
+.work.section-grid,
+.contact.section-grid {
+	grid-template-columns: 1fr;
+}
+
+.skills-content,
+.work-content,
+.contact-content {
+	justify-self: center;
+	max-width: 980px;
+	text-align: center;
+	width: 100%;
+}
+
+.skills-content h2,
+.work-content h2,
+.contact-content h2 {
+	text-align: center;
+}
+
+.section-heading-row {
+	display: block;
+	text-align: center;
+}
+
+.section-heading-row p {
+	margin: 28px auto 0;
+}
+
+.skills.section-grid,
+.work.section-grid,
+.contact.section-grid {
+	grid-template-columns: 1fr;
+}
+
+.skills-content h2,
+.work-content h2,
+.contact-content h2 {
+	text-align: center;
+}
+
+.section-heading-row {
+	display: block;
+	text-align: center;
+}
+
+.section-heading-row p {
+	margin: 28px auto 0;
+}
+
 .intro-content {
 	text-align: center;
 }
@@ -316,21 +397,22 @@ h2 em {
 }
 
 .hero-stamp {
-	border: 1px solid #d2bbb3;
+	background: var(--paper);
+	border: 3px dotted #d2bbb3;
 	border-radius: 50%;
 	color: #b99389;
 	font-family: var(--mono);
 	font-size: .5rem;
-	height: 72px;
+	height: 600px;
 	letter-spacing: .1em;
 	line-height: 1.4;
-	padding-top: 18px;
+	padding-top: 170px;
 	position: absolute;
 	right: 4%;
 	text-align: center;
 	top: 11%;
 	transform: rotate(12deg);
-	width: 72px;
+	width: 600px;
 }
 
 /* Shared sections */
@@ -692,8 +774,11 @@ h2 em {
 	}
 
 	.hero-stamp {
+		height: 180px;
+		padding-top: 50px;
 		right: -2%;
 		top: 46%;
+		width: 180px;
 	}
 
 	.section-grid {
