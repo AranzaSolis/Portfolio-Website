@@ -444,7 +444,7 @@ h2 em {
 .skills-content h2,
 .section-heading-row h2,
 .contact-content h2 {
-	font-size: clamp(3.2rem, 6vw, 6.6rem);
+	font-size: clamp(3.4rem, 6.3vw, 7rem);
 }
 
 .intro-columns {
@@ -560,6 +560,10 @@ h2 em {
 	color: #8e7770;
 	font-family: var(--mono);
 	font-size: .6rem;
+}
+
+.skill-row small {
+	font-size: .7rem;
 }
 
 .skill-row strong {
@@ -910,6 +914,7 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 500; letter-spacing: -.08
 .skill-row { align-items: center; border-top: 1px solid #d5bbb2; display: grid; gap: 16px; grid-template-columns: 45px 1.2fr 1fr; padding: 21px 0; }
 .skill-row:last-child { border-bottom: 1px solid #d5bbb2; }
 .skill-row span, .skill-row small { color: #8e7770; font-family: var(--mono); font-size: .6rem; }
+.skill-row small { font-size: .7rem; }
 .skill-row strong { font-size: 1rem; font-weight: 600; }
 .section-heading-row { align-items: end; display: flex; justify-content: space-between; margin-bottom: 65px; }
 .section-heading-row p { max-width: 210px; }
