@@ -59,8 +59,8 @@
 				</div>
 				<h2>Curious by<br><em>nature.</em></h2>
 				<div class="skill-list">
-					<div class="skill-row"><span>01</span><strong>Web design</strong><small>Figma · Prototyping · Systems</small></div>
-					<div class="skill-row"><span>02</span><strong>Frontend development</strong><small>HTML · CSS · JavaScript</small></div>
+					<div class="skill-row"><span>01</span><strong>Web design</strong><small>Layouts · Prototyping · Visual design</small></div>
+					<div class="skill-row"><span>02</span><strong>Programming</strong><small>HTML · CSS · Responsive design</small></div>
 					<div class="skill-row"><span>03</span><strong>Creative direction</strong><small>Concept · Storytelling · Strategy</small></div>
 				</div>
 			</div>
@@ -110,41 +110,6 @@
 	</main>
 
 	<footer class="site-footer"><span>© 2024 Alexis</span><span>Made with curiosity & care</span><a href="#home">Back to top ↑</a></footer>
-	<script>
-		const animatedSections = document.querySelectorAll('.section-grid');
-
-		const sectionObserver = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				entry.target.classList.toggle('is-visible', entry.isIntersecting);
-			});
-		}, { threshold: 0.22 });
-
-		animatedSections.forEach((section) => sectionObserver.observe(section));
-
-		const navLinks = document.querySelectorAll('.main-nav a');
-		const pageSections = document.querySelectorAll('main > section');
-		const visibleSections = new Map();
-
-		const navObserver = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				visibleSections.set(entry.target.id, entry);
-			});
-
-			const activeSection = [...visibleSections.values()]
-				.filter((entry) => entry.isIntersecting)
-				.sort((first, second) => second.intersectionRatio - first.intersectionRatio)[0];
-
-			if (!activeSection) {
-				return;
-			}
-
-			navLinks.forEach((link) => {
-				link.classList.toggle('active', link.getAttribute('href') === `#${activeSection.target.id}`);
-			});
-		}, { threshold: [0.3, 0.6] });
-
-		pageSections.forEach((section) => navObserver.observe(section));
-	</script>
 
 	<!--
 		PREVIOUS HOME PAGE HERO BACKUP
